@@ -1,0 +1,59 @@
+# Order Management System - Setup Instructions
+
+This project is a simple, premium Order Management System built using a custom PHP MVC architecture.
+
+## Technologies Used
+- **Backend**: PHP 7.4+ (Custom MVC Framework)
+- **Database**: MySQL (using `mysqli` extension)
+- **Frontend**: Vanilla JavaScript (ES6+), CSS3 (Modern SaaS Aesthetic), HTML5
+- **Icons/Fonts**: Google Fonts (Inter)
+
+## Features
+- Dashboard with 30 pre-seeded dummy orders.
+- Real-time status filtering (All, Pending, Completed).
+- Interactive order details modal.
+- Custom routing system.
+- Secure database interactions using prepared statements.
+
+## Setup Instructions
+
+### 1. Prerequisites
+- A PHP environment (e.g., WAMP, XAMPP, or MAMP).
+- MySQL server running on `localhost`.
+
+### 2. Database Setup
+The application includes an automated setup script. To initialize the database:
+1. Ensure your MySQL server is running.
+2. Open your terminal/command prompt.
+3. Navigate to the project root directory.
+4. Run the following command:
+   ```bash
+   php setup_db.php
+   ```
+   *Note: This will create a database named `inventory_db` and a table named `orders` with 30 dummy records.*
+
+### 3. Configuration
+If your MySQL credentials differ from the default (`root` with no password), update the configuration in:
+- `config/database.php`
+
+### 4. Running the Application
+You can run the application using PHP's built-in server or by placing it in your web server's root.
+
+#### Option A: PHP Built-in Server (Recommended for testing)
+1. Navigate to the project root.
+2. Run:
+   ```bash
+   php -S localhost:8000 -t public
+   ```
+3. Open `http://localhost:8000` in your browser.
+
+#### Option B: WAMP/XAMPP
+1. Move the `inventory1` folder to your `www` or `htdocs` directory.
+2. Access it via `http://localhost/inventory1/public`.
+
+## Project Structure
+- `app/`: Core application logic (Controllers, Models, Router).
+- `config/`: Database configuration.
+- `public/`: Web-accessible files (CSS, JS, entry point).
+- `views/`: UI templates.
+- `docs/`: Project documentation and original requirements.
